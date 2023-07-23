@@ -43,4 +43,6 @@ Route::get('/user/attribution',[UserController::class,"attribution"]);
 
 Route::post('/user/attribution',[droitController::class,"registerattribution"])->name("registerattribution");
 
-Route::get('/site/search',[SiteController::class,'search'])->name('searche_site');
+Route::get('/site',[SiteController::class,'siteAllShow'])->name('siteAllShow');
+
+
