@@ -42,3 +42,5 @@ Route::post('/verify_mail',[UserController::class,'verify_mail'])->name('verify_
 Route::get('/user/attribution',[UserController::class,"attribution"]);
 
 Route::post('/user/attribution',[droitController::class,"registerattribution"])->name("registerattribution");
+
+Route::get('/site/search',[SiteController::class,'search'])->name('searche_site');
