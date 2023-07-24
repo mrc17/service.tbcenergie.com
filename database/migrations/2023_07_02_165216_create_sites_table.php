@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('nom');
             $table->foreignId('clustomer_id')->constrained('villes');
             $table->foreignId('topologie_id')->constrained('topologies');
+            $table->string('matricule');
             $table->timestamps();
         });
     }
