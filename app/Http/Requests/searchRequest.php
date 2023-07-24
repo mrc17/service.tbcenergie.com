@@ -24,7 +24,7 @@ class SearchRequest extends FormRequest
     public function rules()
     {
         return [
-            'search' => 'required|min:3|alpha_spaces'
+            'search' => 'required|min:3|'
         ];
     }
 
@@ -38,7 +38,6 @@ class SearchRequest extends FormRequest
         return [
             'search.required' => 'Vous devez entrer au moins un mot identifiant un site.',
             'search.min' => 'Le champ de recherche doit comporter au moins :min caractères.',
-            'search.alpha_spaces' => 'Le champ de recherche ne peut contenir que des lettres et des espaces.'
         ];
     }
 }
