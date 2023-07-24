@@ -801,9 +801,17 @@
                         <font style="vertical-align: inherit;">Rechercher un Site</font>
                     </font>
                 </h1>
+                @error('search')
+                <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+
+                @isset($error)
+                    <div class="alert aler-danger">{{ $error }}
+                @endisset
+
                 <form width="w-full" method="POST" action="{{ route('searche_site') }}">
                     @csrf
-                    <input class="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg px-4 hover:shadow-xl hover:bg-green-300 flex items-center justify-center" type="search" placeholder="Search" aria-label="Search">
+                    <input name="search" class="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg px-4 hover:shadow-xl hover:bg-green-300 flex items-center justify-center" type="search" placeholder="Search" aria-label="Search">
                     <button class="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-green-300 flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" /> </svg><!-- <i class="fas fa-plus mr-3"></i> -->
@@ -953,21 +961,8 @@
                                                 <font style="vertical-align: inherit;">jonsmith@mail.com</font>
                                             </font>
                                         </a></td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
-                                            <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">jonsmith@mail.com</font>
-                                            </font>
-                                        </a></td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
-                                            <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">jonsmith@mail.com</font>
-                                            </font>
-                                        </a></td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
-                                            <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">jonsmith@mail.com</font>
-                                            </font>
-                                        </a></td>
+
+
                                     <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
                                             <font style="vertical-align: inherit;">
                                                 <font style="vertical-align: inherit;">jonsmith@mail.com</font>
