@@ -12,8 +12,12 @@ class SiteController extends Controller
     {
         // Récuperation des informations des sites
         $allSites = Site::all();
-
         $count=1;
         return view('Auth.site', ['allSites' => $allSites,'count'=>$count]);
+    }
+
+
+    public function search(){
+
     }
 }
