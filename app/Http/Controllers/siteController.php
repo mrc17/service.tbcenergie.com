@@ -2,13 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Site;
 use Illuminate\Http\Request;
 
-class siteController extends Controller
+class SiteController extends Controller
 {
-    //Affichage de la page de site
+    // Affichage de la page de site
+    public function siteAllShow()
+    {
+        // Récuperation des informations des sites
+        $allSites = Site::all();
 
-    public function index(){
-        return view('Auth.site');
+        $count=1;
+        return view('Auth.site', ['allSites' => $allSites,'count'=>$count]);
     }
 }
