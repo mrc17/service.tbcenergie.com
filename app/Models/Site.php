@@ -11,6 +11,7 @@ class Site extends Model
 {
     use HasFactory;
 
+
     public function ville()
     {
         return $this->belongsTo(Ville::class, 'clustomer_id',);
