@@ -49,7 +49,7 @@ class UserController extends Controller
             }elseif($grade==2){
                 return redirect()->intended('dashboard');
             }else{
-             return redirect()->intended('dashboard');   
+             return redirect()->intended('dashboard');
             }
         }
 
