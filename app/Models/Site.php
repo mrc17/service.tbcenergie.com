@@ -32,6 +32,6 @@ class Site extends Model
 
     public function AtelierEnergie()
     {
-        return $this->belongsTo(AtelierEnergie::class, 'atl_ener_id');
+        return $this->belongsTo(AtelierEnergie::class,'atl_ener_id');
     }
 }
