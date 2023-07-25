@@ -1,17 +1,16 @@
 <?php
 
 namespace App\Models;
-use App\Models\Generateur;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Site;
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 class AtelierEnergie extends Model
 {
     use HasFactory;
 
-    //relation pour recuperer le genenateur associée au AtelierEnergie
+    //relation pour recuperer le sites associée au AtelierEnergie
 
-    public function Generateurs(){
-        return $this->hasMany(Generateur::class,'atl_ener_id');
+    public function site(){
+        return $this->belongsTo(Site::class,'atl_ener_id','id');
     }
 }
