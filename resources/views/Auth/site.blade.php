@@ -503,11 +503,11 @@
         }
 
         .bg-sidebar {
-            background: #3d68ff;
+            background: #171135;
         }
 
         .cta-btn {
-            color: #3d68ff;
+            color: #171135;
         }
 
         .upgrade-btn {
@@ -595,7 +595,7 @@
                     <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
                 </svg><!-- <i class="fas fa-plus mr-3"></i> -->
                 <font style="vertical-align: inherit;">
-                    <font style="vertical-align: inherit;">Mde KOUADIO
+                    <font style="vertical-align: inherit;">RESPONSABLE
                     </font>
                 </font>
             </button>
@@ -617,7 +617,7 @@
                 </svg><!-- <i class="fas fa-sticky-note mr-3"></i> -->
                 <font style="vertical-align: inherit;">
                     <font style="vertical-align: inherit;">
-                        Maintenance Préventif
+                        Maintenance Préventive
                     </font>
                 </font>
             </a>
@@ -676,17 +676,17 @@
                 <div x-show="isOpen" class="absolute w-32 bg-white rounded-lg shadow-lg py-2 mt-16" style="display: none;">
                     <a href="#" class="block px-4 py-2 account-link hover:text-white">
                         <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">Compte</font>
+                            <font style="vertical-align: inherit;"><strong>Compte</strong></font>
                         </font>
                     </a>
                     <a href="#" class="block px-4 py-2 account-link hover:text-white">
                         <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">Soutien</font>
+                            <font style="vertical-align: inherit;"><strong>Soutien</strong></font>
                         </font>
                     </a>
                     <a href="{{route('Deconnecter')}}" class="block px-4 py-2 account-link hover:text-white">
                         <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">Se déconnecter</font>
+                            <font style="vertical-align: inherit;"><strong>Déconnexion</strong></font>
                         </font>
                     </a>
                 </div>
@@ -796,209 +796,204 @@
 
         <div class="w-full overflow-x-hidden border-t flex flex-col">
             <main class="w-full flex-grow p-6">
-                <h1 class="text-3xl text-black pb-6">
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">Rechercher un Site</font>
-                    </font>
-                </h1>
                 @error('search')
                 <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
 
                 @isset($error)
-                    <div class="alert aler-danger">{{ $error }}
-                @endisset
+                <div class="alert aler-danger">{{ $error }}
+                    @endisset
 
-                <form width="w-full" method="POST" action="{{ route('searche_site') }}">
-                    @csrf
-                    <input name="search" class="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg px-4 hover:shadow-xl hover:bg-green-300 flex items-center justify-center" type="search" placeholder="Search" aria-label="Search">
-                    <button class="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-green-300 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" /> </svg><!-- <i class="fas fa-plus mr-3"></i> -->
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">Rechercher
+                    <form width="w-full" method="POST" action="{{ route('searche_site') }}">
+                        @csrf
+                        <input name="search" class="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg px-4 hover:shadow-xl hover:bg-sky-300 flex items-center justify-center" type="search" placeholder="Entrez..." aria-label="Search">
+                        <button class="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-orange-600 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" /> </svg><!-- <i class="fas fa-plus mr-3"></i> -->
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Rechercher
+                                </font>
                             </font>
-                        </font>
-                    </button>
-                </form>
-                <div class="w-full mt-12">
-                    <p class="text-xl pb-3 flex items-center">
-                        <svg class="svg-inline--fa fa-list fa-w-16 mr-3" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="list" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-                            <path fill="currentColor" d="M80 368H16a16 16 0 0 0-16 16v64a16 16 0 0 0 16 16h64a16 16 0 0 0 16-16v-64a16 16 0 0 0-16-16zm0-320H16A16 16 0 0 0 0 64v64a16 16 0 0 0 16 16h64a16 16 0 0 0 16-16V64a16 16 0 0 0-16-16zm0 160H16a16 16 0 0 0-16 16v64a16 16 0 0 0 16 16h64a16 16 0 0 0 16-16v-64a16 16 0 0 0-16-16zm416 176H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"></path>
-                        </svg><!-- <i class="fas fa-list mr-3"></i> -->
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">Liste des sites
+                        </button>
+                    </form>
+                    <div class="w-full mt-12">
+                        <p class="text-xl pb-3 flex items-center">
+                            <svg class="svg-inline--fa fa-list fa-w-16 mr-3" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="list" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                                <path fill="currentColor" d="M80 368H16a16 16 0 0 0-16 16v64a16 16 0 0 0 16 16h64a16 16 0 0 0 16-16v-64a16 16 0 0 0-16-16zm0-320H16A16 16 0 0 0 0 64v64a16 16 0 0 0 16 16h64a16 16 0 0 0 16-16V64a16 16 0 0 0-16-16zm0 160H16a16 16 0 0 0-16 16v64a16 16 0 0 0 16 16h64a16 16 0 0 0 16-16v-64a16 16 0 0 0-16-16zm416 176H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"></path>
+                            </svg><!-- <i class="fas fa-list mr-3"></i> -->
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;"><strong>Liste des sites</strong>
+                                </font>
                             </font>
-                        </font>
-                    </p>
-                    <div class="bg-white overflow-auto">
-                        <table class="min-w-full bg-white">
-                            <thead class="bg-gray-800 text-white">
-                                <tr>
-                                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm">
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">Numero</font>
-                                        </font>
-                                    </th>
-                                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm">
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">SITE ID</font>
-                                        </font>
-                                    </th>
-                                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm">
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">SITE NAME</font>
-                                        </font>
-                                    </th>
-                                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm">
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">CUSTUMER</font>
-                                        </font>
-                                    </th>
-                                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm">
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">TOPOLOGIE</font>
-                                        </font>
-                                    </th>
-                                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm">
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">MARQUE DU GE</font>
-                                        </font>
-                                    </th>
-                                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm">
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">CAPACITE (KVA) </font>
-                                        </font>
-                                    </th>
-                                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm">
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">MOTEUR</font>
-                                        </font>
-                                    </th>
-                                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm">
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">TYPE BAIE</font>
-                                        </font>
-                                    </th>
-                                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm">
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">NOMBRE DE SLOT</font>
-                                        </font>
-                                    </th>
-                                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm">
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">NOMBRE DE REDRESSEUR</font>
-                                        </font>
-                                    </th>
-                                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm">
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">NOMBRE DE SLOT DISPONIBLES</font>
-                                        </font>
-                                    </th>
-                                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm">
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">MARQUE DE BATTERIE</font>
-                                        </font>
-                                    </th>
-                                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm">
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">CAPACITE / BRANCHES</font>
-                                        </font>
-                                    </th>
-                                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm">
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">NOMBRE BRANCHES</font>
-                                        </font>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody class="text-gray-700">
-                                @foreach ($allSites as $AllSite)
+                        </p>
+                        <div class="bg-white overflow-auto">
+                            <table class="min-w-full bg-white">
+                                <thead class="bg-gray-800 text-white">
+                                    <tr>
+                                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">Numero</font>
+                                            </font>
+                                        </th>
+                                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">SITE ID</font>
+                                            </font>
+                                        </th>
+                                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">SITE NAME</font>
+                                            </font>
+                                        </th>
+                                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">CLUSTUMER</font>
+                                            </font>
+                                        </th>
+                                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">TOPOLOGIE</font>
+                                            </font>
+                                        </th>
+                                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">MARQUE DU GE</font>
+                                            </font>
+                                        </th>
+                                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">CAPACITE (KVA) </font>
+                                            </font>
+                                        </th>
+                                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">MOTEUR</font>
+                                            </font>
+                                        </th>
+                                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">TYPE BAIE</font>
+                                            </font>
+                                        </th>
+                                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">NOMBRE DE SLOT</font>
+                                            </font>
+                                        </th>
+                                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">NOMBRE DE REDRESSEUR</font>
+                                            </font>
+                                        </th>
+                                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">NOMBRE DE SLOT DISPONIBLES</font>
+                                            </font>
+                                        </th>
+                                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">MARQUE DE BATTERIE</font>
+                                            </font>
+                                        </th>
+                                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">CAPACITE / BRANCHES</font>
+                                            </font>
+                                        </th>
+                                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">NOMBRE BRANCHES</font>
+                                            </font>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-gray-700">
+                                    @foreach ($allSites as $AllSite)
 
-                                <tr>
-                                    <td class="text-left py-3 px-4">
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">{{ $count++ }}</font>
-                                        </font>
-                                    </td>
-                                    <td class="text-left py-3 px-4">
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">{{ $AllSite->matricule }}</font>
-                                        </font>
-                                    </td>
-                                    <td class="text-left py-3 px-4">
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">{{ $AllSite->nom }}</font>
-                                        </font>
-                                    </td>
-                                    <td class="text-left py-3 px-4">
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">{{ $AllSite->ville->nom_ville}}</font>
-                                        </font>
-                                    </td>
-                                    <td class="text-left py-3 px-4">
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">{{ $AllSite->topologie->type}}</font>
-                                        </font>
-                                    </td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
+                                    <tr>
+                                        <td class="text-left py-3 px-4">
                                             <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">jonsmith@mail.com</font>
+                                                <font style="vertical-align: inherit;">{{ $count++ }}</font>
                                             </font>
-                                        </a></td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
+                                        </td>
+                                        <td class="text-left py-3 px-4">
                                             <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">jonsmith@mail.com</font>
+                                                <font style="vertical-align: inherit;">{{ $AllSite->matricule }}</font>
                                             </font>
-                                        </a></td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
+                                        </td>
+                                        <td class="text-left py-3 px-4">
                                             <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">jonsmith@mail.com</font>
+                                                <font style="vertical-align: inherit;">{{ $AllSite->nom }}</font>
                                             </font>
-                                        </a></td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
+                                        </td>
+                                        <td class="text-left py-3 px-4">
                                             <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">jonsmith@mail.com</font>
+                                                <font style="vertical-align: inherit;">{{ $AllSite->ville->nom_ville}}</font>
                                             </font>
-                                        </a></td>
+                                        </td>
+                                        <td class="text-left py-3 px-4">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">{{ $AllSite->topologie->type}}</font>
+                                            </font>
+                                        </td>
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">{{ dd($AllSite->generateur->marque_id)}}</font>
+                                                </font>
+                                            </a></td>
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">jonsmith@mail.com</font>
+                                                </font>
+                                            </a></td>
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">jonsmith@mail.com</font>
+                                                </font>
+                                            </a></td>
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">jonsmith@mail.com</font>
+                                                </font>
+                                            </a></td>
 
 
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
-                                            <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">jonsmith@mail.com</font>
-                                            </font>
-                                        </a></td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
-                                            <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">jonsmith@mail.com</font>
-                                            </font>
-                                        </a></td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
-                                            <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">jonsmith@mail.com</font>
-                                            </font>
-                                        </a></td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
-                                            <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">jonsmith@mail.com</font>
-                                            </font>
-                                        </a></td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
-                                            <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">jonsmith@mail.com</font>
-                                            </font>
-                                        </a></td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
-                                            <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">jonsmith@mail.com</font>
-                                            </font>
-                                        </a></td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">jonsmith@mail.com</font>
+                                                </font>
+                                            </a></td>
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">jonsmith@mail.com</font>
+                                                </font>
+                                            </a></td>
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">jonsmith@mail.com</font>
+                                                </font>
+                                            </a></td>
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">jonsmith@mail.com</font>
+                                                </font>
+                                            </a></td>
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">jonsmith@mail.com</font>
+                                                </font>
+                                            </a></td>
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">jonsmith@mail.com</font>
+                                                </font>
+                                            </a></td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                </div>
             </main>
 
             <footer class="w-full bg-white text-right p-4">
@@ -1125,6 +1120,6 @@
         </div>
         <div class="VIpgJd-yAWNEb-jOfkMb-Ne3sFf" style="display: none;"></div>
     </div>
-
 </body>
 </html>
+
