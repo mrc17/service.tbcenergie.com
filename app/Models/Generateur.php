@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\Site;
 use App\Models\MarqueGE;
+use App\Models\MoteurGE;
 use App\Models\CapaciteGE;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -27,5 +28,12 @@ class Generateur extends Model
 
     public function capacite_g_e_s(){
         return $this->belongsTo(CapaciteGE::class,'capacite_id');
+    }
+
+    //relation pour recuperer la moteur associée au genenateur
+
+    public function moteur(){
+
+        return $this->belongsTo(MoteurGE::class,'moteur_id');
     }
 }
