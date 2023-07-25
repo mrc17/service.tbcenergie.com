@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreignId('clustomer_id')->constrained('villes');
             $table->foreignId('topologie_id')->constrained('topologies');
             $table->foreignId('generateurs_id')->constrained('generateurs');
+            $table->foreignId('capacite_id')->constrained('capacite_g_e_s');
             $table->string('matricule');
             $table->timestamps();
         });
