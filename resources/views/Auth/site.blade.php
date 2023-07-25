@@ -936,54 +936,54 @@
                                                 <font style="vertical-align: inherit;">{{ $AllSite->topologie->type}}</font>
                                             </font>
                                         </td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" >
                                                 <font style="vertical-align: inherit;">
-                                                    <font style="vertical-align: inherit;">{{ dd($AllSite->generateur->marque_id)}}</font>
+                                                    <font style="vertical-align: inherit;">{{ $AllSite->generateur->marqueGE->nom_GE}}</font>
                                                 </font>
                                             </a></td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" >
                                                 <font style="vertical-align: inherit;">
-                                                    <font style="vertical-align: inherit;">jonsmith@mail.com</font>
+                                                    <font style="vertical-align: inherit;">{{$AllSite->generateur->capacite_g_e_s->puissance_GE}}</font>
                                                 </font>
                                             </a></td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" >
                                                 <font style="vertical-align: inherit;">
-                                                    <font style="vertical-align: inherit;">jonsmith@mail.com</font>
+                                                    <font style="vertical-align: inherit;">{{$AllSite->generateur->capacite_g_e_s->type_GE}}</font>
                                                 </font>
                                             </a></td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" >
                                                 <font style="vertical-align: inherit;">
                                                     <font style="vertical-align: inherit;">jonsmith@mail.com</font>
                                                 </font>
                                             </a></td>
 
 
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" >
                                                 <font style="vertical-align: inherit;">
                                                     <font style="vertical-align: inherit;">jonsmith@mail.com</font>
                                                 </font>
                                             </a></td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" >
                                                 <font style="vertical-align: inherit;">
                                                     <font style="vertical-align: inherit;">jonsmith@mail.com</font>
                                                 </font>
                                             </a></td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" >
                                                 <font style="vertical-align: inherit;">
                                                     <font style="vertical-align: inherit;">jonsmith@mail.com</font>
                                                 </font>
                                             </a></td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" >
                                                 <font style="vertical-align: inherit;">
                                                     <font style="vertical-align: inherit;">jonsmith@mail.com</font>
                                                 </font>
                                             </a></td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" >
                                                 <font style="vertical-align: inherit;">
                                                     <font style="vertical-align: inherit;">jonsmith@mail.com</font>
                                                 </font>
                                             </a></td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" >
                                                 <font style="vertical-align: inherit;">
                                                     <font style="vertical-align: inherit;">jonsmith@mail.com</font>
                                                 </font>
