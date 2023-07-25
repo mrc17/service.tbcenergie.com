@@ -953,7 +953,7 @@
                                             </a></td>
                                         <td class="text-left py-3 px-4"><a class="hover:text-blue-500" >
                                                 <font style="vertical-align: inherit;">
-                                                    <font style="vertical-align: inherit;">{{$AllSite->atl_ener_id}}</font>
+                                                    <font style="vertical-align: inherit;">{{$AllSite->AtelierEnergie}}</font>
                                                 </font>
                                             </a></td>
 
