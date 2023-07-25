@@ -6,7 +6,6 @@ use App\Models\Site;
 use App\Models\MarqueGE;
 use App\Models\MoteurGE;
 use App\Models\CapaciteGE;
-use App\Models\AtelierEnergie;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -40,10 +39,4 @@ class Generateur extends Model
         return $this->belongsTo(MoteurGE::class, 'moteur_id');
     }
 
-    //relation pour recuperer la AtelierEnergie associée au genenateur
-
-    public function AtelierEnergie()
-    {
-        return $this->belongsTo(AtelierEnergie::class, 'atl_ener_id');
-    }
 }
