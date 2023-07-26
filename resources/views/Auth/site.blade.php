@@ -936,60 +936,60 @@
                                                 <font style="vertical-align: inherit;">{{ $AllSite->topologie->type}}</font>
                                             </font>
                                         </td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" >
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500">
                                                 <font style="vertical-align: inherit;">
                                                     <font style="vertical-align: inherit;">{{ $AllSite->generateur->marqueGE->nom_GE}}</font>
                                                 </font>
                                             </a></td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" >
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500">
                                                 <font style="vertical-align: inherit;">
                                                     <font style="vertical-align: inherit;">{{$AllSite->generateur->capacite_g_e_s->puissance_GE}}</font>
                                                 </font>
                                             </a></td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" >
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500">
                                                 <font style="vertical-align: inherit;">
                                                     <font style="vertical-align: inherit;">{{$AllSite->generateur->moteur->type_GE}}</font>
                                                 </font>
                                             </a></td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" >
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500">
                                                 <font style="vertical-align: inherit;">
                                                     <font style="vertical-align: inherit;">{{$AllSite->AtelierEnergie->baies->type}}</font>
                                                 </font>
                                             </a></td>
 
 
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" >
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500">
                                                 <font style="vertical-align: inherit;">
                                                     <font style="vertical-align: inherit;">{{$AllSite->AtelierEnergie->nbre_slot}}</font>
                                                 </font>
                                             </a></td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" >
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500">
                                                 <font style="vertical-align: inherit;">
                                                     <font style="vertical-align: inherit;">{{$AllSite->AtelierEnergie->nbre_redresseur}}</font>
                                                 </font>
                                             </a></td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" >
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500">
                                                 <font style="vertical-align: inherit;">
                                                     <font style="vertical-align: inherit;">
                                                         {{
-                                                            ($AllSite->AtelierEnergie->nbre_redresseur) - ($AllSite->AtelierEnergie->nbre_redresseur_autre)
+                                                            ($AllSite->AtelierEnergie->nbre_slot)-($AllSite->AtelierEnergie->nbre_redresseur)
                                                         }}
                                                     </font>
-                                                                                                    </font>
-                                            </a></td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" >
-                                                <font style="vertical-align: inherit;">
-                                                    <font style="vertical-align: inherit;">jonsmith</font>
                                                 </font>
                                             </a></td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" >
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500">
                                                 <font style="vertical-align: inherit;">
-                                                    <font style="vertical-align: inherit;">jonsmith</font>
+                                                    <font style="vertical-align: inherit;">{{$AllSite->batterie->marque->nom_Bat}}</font>
                                                 </font>
                                             </a></td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" >
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500">
                                                 <font style="vertical-align: inherit;">
-                                                    <font style="vertical-align: inherit;">jonsmith</font>
+                                                    <font style="vertical-align: inherit;">{{$AllSite->batterie->capacitebranche->puissance_branche}}</font>
+                                                </font>
+                                            </a></td>
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">{{$AllSite->batterie->nbre_branche}}</font>
                                                 </font>
                                             </a></td>
                                     </tr>
@@ -1024,4 +1024,3 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
 </body>
 </html>
-
