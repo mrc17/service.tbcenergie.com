@@ -23,5 +23,10 @@ class Batterie extends Model
         return $this->belongsTo(MarqueBat::class, 'bat_id', 'id');
     }
 
+    //relation pour recuperer la capacite_branches associée au batterie
 
+    public function capacitebranche()
+    {
+        return $this->belongsTo(CapaciteBranche::class, "capacite_id");
+    }
 }
