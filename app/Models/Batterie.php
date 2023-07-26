@@ -17,4 +17,11 @@ class Batterie extends Model
         return $this->belongsTo(Site::class, 'batterie_id');
     }
 
+    //relation pour recuperer la marque associée à la batterie
+    public function marque()
+    {
+        return $this->belongsTo(MarqueBat::class, 'bat_id', 'id');
+    }
+
+
 }
