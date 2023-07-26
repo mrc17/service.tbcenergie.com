@@ -34,4 +34,12 @@ class Site extends Model
     {
         return $this->belongsTo(AtelierEnergie::class,'atl_ener_id');
     }
+
+        //relation pour recuperer la batterie associée au site
+
+        public function batterie(){
+
+            return $this->belongsTo(Batterie::class,'batterie_id','id');
+        }
+
 }
