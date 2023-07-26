@@ -960,18 +960,22 @@
 
                                         <td class="text-left py-3 px-4"><a class="hover:text-blue-500" >
                                                 <font style="vertical-align: inherit;">
-                                                    <font style="vertical-align: inherit;">jonsmith</font>
+                                                    <font style="vertical-align: inherit;">{{$AllSite->AtelierEnergie->nbre_slot}}</font>
                                                 </font>
                                             </a></td>
                                         <td class="text-left py-3 px-4"><a class="hover:text-blue-500" >
                                                 <font style="vertical-align: inherit;">
-                                                    <font style="vertical-align: inherit;">jonsmith</font>
+                                                    <font style="vertical-align: inherit;">{{$AllSite->AtelierEnergie->nbre_redresseur}}</font>
                                                 </font>
                                             </a></td>
                                         <td class="text-left py-3 px-4"><a class="hover:text-blue-500" >
                                                 <font style="vertical-align: inherit;">
-                                                    <font style="vertical-align: inherit;">jonsmith</font>
-                                                </font>
+                                                    <font style="vertical-align: inherit;">
+                                                        {{
+                                                            ($AllSite->AtelierEnergie->nbre_redresseur) - ($AllSite->AtelierEnergie->nbre_redresseur_autre)
+                                                        }}
+                                                    </font>
+                                                                                                    </font>
                                             </a></td>
                                         <td class="text-left py-3 px-4"><a class="hover:text-blue-500" >
                                                 <font style="vertical-align: inherit;">
@@ -1002,7 +1006,7 @@
                         Construit par </font>
                 </font><a target="_blank" href="https://davidgrzyb.com" class="underline">
                     <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">David Grzyb</font>
+                        <font style="vertical-align: inherit;">Mrcode17</font>
                     </font>
                 </a>
                 <font style="vertical-align: inherit;">
@@ -1011,115 +1015,13 @@
                 </font>
             </footer>
         </div>
-
     </div>
-
     <!-- AlpineJS -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer=""></script>
     <!-- Font Awesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
     <!-- ChartJS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
-
-    <script>
-        var chartOne = document.getElementById('chartOne');
-        var myChart = new Chart(chartOne, {
-            type: 'bar'
-            , data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange']
-                , datasets: [{
-                    label: '# of Votes'
-                    , data: [12, 19, 3, 5, 2, 3]
-                    , backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)'
-                        , 'rgba(54, 162, 235, 0.2)'
-                        , 'rgba(255, 206, 86, 0.2)'
-                        , 'rgba(75, 192, 192, 0.2)'
-                        , 'rgba(153, 102, 255, 0.2)'
-                        , 'rgba(255, 159, 64, 0.2)'
-                    ]
-                    , borderColor: [
-                        'rgba(255, 99, 132, 1)'
-                        , 'rgba(54, 162, 235, 1)'
-                        , 'rgba(255, 206, 86, 1)'
-                        , 'rgba(75, 192, 192, 1)'
-                        , 'rgba(153, 102, 255, 1)'
-                        , 'rgba(255, 159, 64, 1)'
-                    ]
-                    , borderWidth: 1
-                }]
-            }
-            , options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                }
-            }
-        });
-
-        var chartTwo = document.getElementById('chartTwo');
-        var myLineChart = new Chart(chartTwo, {
-            type: 'line'
-            , data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange']
-                , datasets: [{
-                    label: '# of Votes'
-                    , data: [12, 19, 3, 5, 2, 3]
-                    , backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)'
-                        , 'rgba(54, 162, 235, 0.2)'
-                        , 'rgba(255, 206, 86, 0.2)'
-                        , 'rgba(75, 192, 192, 0.2)'
-                        , 'rgba(153, 102, 255, 0.2)'
-                        , 'rgba(255, 159, 64, 0.2)'
-                    ]
-                    , borderColor: [
-                        'rgba(255, 99, 132, 1)'
-                        , 'rgba(54, 162, 235, 1)'
-                        , 'rgba(255, 206, 86, 1)'
-                        , 'rgba(75, 192, 192, 1)'
-                        , 'rgba(153, 102, 255, 1)'
-                        , 'rgba(255, 159, 64, 1)'
-                    ]
-                    , borderWidth: 1
-                }]
-            }
-            , options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                }
-            }
-        });
-
-    </script>
-    <div id="goog-gt-" class="skiptranslate VIpgJd-yAWNEb-L7lbkb" dir="ltr">
-        <div style="padding: 8px;">
-            <div>
-                <div class="VIpgJd-yAWNEb-l4eHX"><img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png" width="20" height="20" alt="Google Traduction"></div>
-            </div>
-        </div>
-        <div style="padding: 8px; float: left; width: 100%;">
-            <h1 class="VIpgJd-yAWNEb-r4nke VIpgJd-yAWNEb-mrxPge">Texte d'origine</h1>
-        </div>
-        <div style="padding: 8px;">
-            <div class="VIpgJd-yAWNEb-nVMfcd-fmcmS"></div>
-        </div>
-        <div class="VIpgJd-yAWNEb-cGMI2b" style="padding: 8px;">
-            <div class="VIpgJd-yAWNEb-Z0Arqf-PLDbbf"><span class="VIpgJd-yAWNEb-Z0Arqf-hSRGPd">Proposer une meilleure traduction</span></div>
-            <div class="VIpgJd-yAWNEb-fw42Ze-Z0Arqf-haAclf">
-                <hr style="color: #ccc; background-color: #ccc; height: 1px; border: none;">
-                <div class="VIpgJd-yAWNEb-Z0Arqf-H9tDt"></div>
-            </div>
-        </div>
-        <div class="VIpgJd-yAWNEb-jOfkMb-Ne3sFf" style="display: none;"></div>
-    </div>
 </body>
 </html>
 
